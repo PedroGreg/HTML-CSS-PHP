@@ -1,12 +1,35 @@
 <?php
     if(isset($_POST['submit']))
     {
-        print_r($_POST['nome']);
-        print_r('<br>');
-        print_r($_POST['email']);
-        print_r('<br>');
-        print_r($_POST['telefone']);
-    }
+    //     print_r('Nome: ' . $_POST['nome']);
+    //     print_r('<br>');
+    //     print_r('Email: ' . $_POST['email']);
+    //     print_r('<br>');
+    //     print_r('Telefone: ' . $_POST['telefone']);
+    //     print_r('<br>');
+    //     print_r('Sexo: ' . $_POST['genero']);
+    //     print_r('<br>');
+    //     print_r('Data de nascimento: ' . $_POST['nascimento']);
+    //     print_r('<br>');
+    //     print_r('Cidade: ' . $_POST['cidade']);
+    //     print_r('<br>');
+    //     print_r('Estado: ' . $_POST['estado']);
+    //     print_r('<br>');
+    //     print_r('Endereco: ' .$_POST['endereco']);
+    
+    include_once('config.php');
+
+    $nome = $_POST['nome'];
+    $email = $_POST['email'];
+    $telefone = $_POST['telefone'];
+    $sexo = $_POST['genero'];
+    $data_nasc = $_POST['nascimento'];
+    $cidade = $_POST['cidade'];
+    $estado = $_POST['estado'];
+    $endereco = $_POST['endereco'];
+
+    $result = mysqli_query($conexao, "INSERT INTO usuarios(nome,email,telefone,sexo,data_nasc,cidade,estado,endereco) VALUES ('$nome','$email','$telefone','$sexo','$data_nasc','$cidade','$estado','$endereco')"); 
+}
 ?>
 <!DOCTYPE html>
 <html lang="pt_BR">
@@ -20,7 +43,7 @@
 
 <body>
     <div id="divForm">
-        <form action="formulario.php" method="POST">
+        <form action="./formulario.php" method="post">
             <fieldset>
                 <legend><b>Formulário</b></legend><br>
                 <div class="divInput">
@@ -56,7 +79,7 @@
                     <input type="text" name="endereco" id="endereco" class="inputUser" required>
                     <label for="endereco" class="labelInput">Endereço</label>
                 </div><br>
-                <input type="submit" id="submit">
+                <input type="submit" id="submit" name="submit">
             </fieldset>
         </form>
     </div>
