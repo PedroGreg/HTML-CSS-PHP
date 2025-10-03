@@ -1,0 +1,29 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+
+body {
+    background-image: linear-gradient(90deg, #2500f5, #080042);
+    color: white;
+    text-align: center;
+}
+
+#divLogin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #01014268;
+    padding: 30px;
+    border-radius: 10px;
+}
+a{
+    border: #2500f5 3px solid;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+a:hover{
+    background-color: #2500f5;
+}
