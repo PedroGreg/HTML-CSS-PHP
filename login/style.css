@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+    background-image: linear-gradient(90deg, #2500f5, #080042)
+}
+
+#div-login {
+    background-color: #01014268;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    color: white;
+    padding: 80px;
+}
+
+input {
+    padding: 12px;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+button {
+    background-color: dodgerblue;
+    border: none;
+    padding: 15px;
+    width: 100%;
+    border-radius: 10px;
+}
+button:hover{
+    background-color: rgb(18, 76, 134);
+}
